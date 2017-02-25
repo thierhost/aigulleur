@@ -24,11 +24,11 @@ var maxserv2 = 0;
 
 function load(){
     let serveur;
-    if(maxserv1 <100000 ){
+    if(maxserv1 <10000 ){
         serveur = serveur1;
         maxserv1=maxserv1+1;
     }else {
-        if(maxserv2<100000){
+        if(maxserv2<10000){
             serveur = serveur2;
             maxserv2=maxserv2+1;
         }
@@ -85,7 +85,6 @@ app.post("/subscribe",function (req,res) {
 
 
 });
-
 
 app.post("/messages",function (req,res) {
     let serveur = load();
